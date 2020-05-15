@@ -23,4 +23,4 @@ pip install matplotlib
 pip install seaborn
 pip install plotly
 ```
-#For general users who want to perform cancer subtypes prediction by our provided model :
+# For general users who want to perform cancer subtypes prediction by our provided model :
