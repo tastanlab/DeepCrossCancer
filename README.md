@@ -22,6 +22,5 @@ pip install statsmodels
 pip install matplotlib
 pip install seaborn
 pip install plotly
-pip install holoviews
-pip install bokeh
 ```
+#For general users who want to perform cancer subtypes prediction by our provided model :
