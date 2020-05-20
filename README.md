@@ -21,6 +21,21 @@ pip install statsmodels
 ```python
 pip install matplotlib
 pip install seaborn
-pip install plotly
+pip install plotly==3.10.0
 ```
-# For general users who want to perform clustering to find cancer subtypes by our provided model :
+# For general users who want to perform clustering to find cancer subtypes by our provided model:
+```python
+python model.py params.py --cross_cancer False
+```
+For details of other parameters, run:
+```python
+python predict.py --help
+```
+or
+```python
+python predict.py -h
+```
+# Input data format
+The input data consists of train and test data with normalized format. In total, there are 20,536 columns: 20,531 genes, age, gender, labels (cancer types in our case), survival time, and vital status. Age is in the discrete form. We created buckets for it. The data is originally retrieved from http://acgt.cs.tau.ac.il/multi_omic_benchmark/download.html.
+## Other genomics datasets (mutation and CNV) for cross-cancer analysis
+# Train the model with your own data
