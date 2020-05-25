@@ -5,7 +5,7 @@ DeepCrossCancer provides a deep-learning method for discovering cross-cancer pat
 ```
 git clone https://github.com/dyguay/DeepCrossCancer
 ```
-•	Since the package is written in python 3.5, [python 3.5](https://www.python.org/downloads/) with the pip tool must be installed first. DeepCrossCancer uses the following dependencies: numpy, scipy, pandas, talos, sklearn, keras=2.1.6, tensorflow-gpu=1.12.0, shap, statsmodels. You can install these packages first, by the following commands:
+•	Since the package is written in [python 3.5](https://www.python.org/downloads/), with the pip tool must be installed first. DeepCrossCancer uses the following dependencies: numpy, scipy, pandas, talos, sklearn, keras=2.1.6, tensorflow-gpu=1.12.0, shap, statsmodels. You can install these packages first, by the following commands:
 ```python
 pip install pandas
 pip install numpy
