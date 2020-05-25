@@ -40,11 +40,11 @@ First run model.py to train your data and find cross-cancer patients:
 ```python
 python3 model.py params.py --data_dir [YOUR DATA_DIR] --train_file [YOUR TRAIN_FILE] --test_file [YOUR TEST_FILE] --dimension [NUMBER OF FEATURES OF YOUR DATA] --num_classes [NUMBER OF CLASSES FOR SUPERVISED PART]
 ```
-Then, run analysis.py to analyze cross-cancer patients that you found previously, statistically.
+Then, run analysis.py to analyze cross-cancer patients statistically that you found previously.
 ```python
 python3 analysis.py params.py --train_unnorm_file [YOUR TRAIN_UNNORM_FILE] --test_unnorm_file [YOUR TEST_UNNORM_FILE] --mut_data_dir [YOUR MUT_DATA_DIR] --cnv_data_dir [YOUR CNV_DATA_DIR]
 ```
-For details of other parameters, check params.py
+For details of other parameters, check params.py.
 # Input data format
 The input data consists of train and test data with normalized format. In total, there are 20,536 columns: 20,531 genes, age, gender, labels (cancer types in our case), survival time, and vital status. Age is in the discrete form. We created buckets for it. The data is originally retrieved from http://acgt.cs.tau.ac.il/multi_omic_benchmark/download.html.
 ## Other genomics datasets (mutation and CNV) for cross-cancer analysis
