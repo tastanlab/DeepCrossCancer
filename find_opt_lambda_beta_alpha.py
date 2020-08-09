@@ -110,12 +110,12 @@ def alpha_tuning(X_train, Y_train, Y_tr_gen, Y_tr_cl, pre_model, num_groups, FLA
         for train_index, val_index in indices:
             # get initial Q and fix S and C
             
-            _,total_M_t=create_M([X_train[train_index]], num_groups, pre_model)
-            _,total_M_v=create_M([X_train[val_index]], num_groups, pre_model)
+            _,total_M_t=create_M(X_train[train_index], num_groups, pre_model)
+            _,total_M_v=create_M(X_train[val_index], num_groups, pre_model)
             
             #create a new network
             
-            model = model(lambda_optimal, beta_optimal, alpha_this,'train', FLAGS)
+            model = create_model(lambda_optimal, beta_optimal, alpha_this,'train', FLAGS)
             model.fit(X_train[train_index], [Y_train[train_index], Y_tr_cl[train_index], total_M_t], epochs=FLAGS.num_train_epochs, batch_size=FLAGS.batch_size_train, 
                        validation_data= (X_train[val_index], [Y_train[val_index], Y_tr_cl[val_index], total_M_v]), verbose=0)
             
